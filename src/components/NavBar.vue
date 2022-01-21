@@ -8,22 +8,30 @@
     <div class="navBarItem">
       <el-tag
               :key="tag"
-              class="mx-1"
+              class=" margin-r-5"
               closable
               :disable-transitions="false"
               @close="handleClose(tag)">
         首页
-
+      </el-tag>
+      <el-tag
+              :key="tag"
+              class="margin-r-5"
+              closable
+              :disable-transitions="false"
+              @close="handleClose(tag)">
+        首页1
       </el-tag>
     </div>
-
-
   </div>
 </template>
 
 <script>
   export default {
-    name: "NavBar"
+    name: "NavBar",
+    created(){
+      console.log('vuex',this.$store);
+    }
   }
 </script>
 

@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/index'
+import store from './store/index'
 
 import 'animate.css/animate.min.css' //引入动画
 
@@ -12,6 +13,7 @@ import * as ElIconModules from '@element-plus/icons-vue'
 let app = createApp(App);
 app.use(ElementPlus);
 app.use(router);
+app.use(store);
 
 // 统一注册el-icon图标
 for(let iconName in ElIconModules) {
