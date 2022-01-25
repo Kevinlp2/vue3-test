@@ -4,6 +4,10 @@ import {createRouter,createWebHistory} from 'vue-router'
 const routes = [
   {
     path: '/',
+    component: ()=>import('@/views/Echarts-ditu'),
+  },
+  {
+    path: '/animate',
     component: ()=>import('@/views/Animate'),
   },
   {
