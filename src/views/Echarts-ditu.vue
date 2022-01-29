@@ -6,6 +6,7 @@
 
 <script>
   import  axios from 'axios'
+  import chongqingJson from '../../public/data/chongqing.json'
   export default {
     name: "Echarts-ditu",
     data() {
@@ -17,9 +18,8 @@
 
       let myChart = this.$echarts.init(document.getElementById("myChart"));
 
-      axios.get('/api/chongqing.json').then(res=>{
-        // console.log('数据:',res.data);
-        this.$echarts.registerMap('sc', res.data, {});
+
+        this.$echarts.registerMap('sc', chongqingJson, {});
         var option = {
           series: [{
             name: '重庆 ',
@@ -69,7 +69,7 @@
         myChart.on('click',function (param) {
           console.log('点击:',param);
         })
-      })
+
 
     },
   }
